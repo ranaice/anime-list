@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'l10n/l10n_extensions.dart';
 import 'router/app_router.dart';
+import 'themes/themes.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -16,6 +17,8 @@ class AppWidget extends StatelessWidget {
       ],
       supportedLocales: AppLocalizations.supportedLocales,
       onGenerateRoute: AppRouter().onGenerateRoute,
+      themeMode: ThemeMode.dark,
+      darkTheme: AppTheme.darkThemeData,
     );
   }
 }
