@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import '../../presentation/l10n/l10n_extensions.dart';
-import '../../presentation/router/app_router.dart';
+import 'l10n/l10n_extensions.dart';
+import 'router/app_router.dart';
 
 class AppWidget extends StatelessWidget {
   @override

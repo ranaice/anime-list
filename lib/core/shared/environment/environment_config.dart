@@ -1,4 +1,4 @@
-import 'package:anime_list/core/shared/environment/environment_values.dart';
+import 'environment_values.dart';
 
 class EnvironmentConfig {
   final Environments environment;

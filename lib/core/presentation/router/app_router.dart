@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/presentation/app_widget.dart';
+import '../app_widget.dart';
 import 'routes.dart';
 
 class AppRouter {
