@@ -170,6 +170,7 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 - [ ] Handle diff screen sizes
 - [ ] Optimize for the Web and Desktop
 - [ ] Use Navigation 2.0
+- [ ] Multi Theming Support
 
 
 README based on the [Very Good CLI][very_good_cli_link]
