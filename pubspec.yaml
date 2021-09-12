@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   dartz: ^0.10.0
   dio: ^4.0.0
   flash: ^2.0.1
@@ -21,6 +23,7 @@ dependencies:
   flutter_hooks: ^0.18.0
   freezed_annotation: ^0.14.2
   json_annotation: ^4.0.1
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +38,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:

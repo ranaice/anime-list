@@ -107,7 +107,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-Usually the process of including a new string in `.arb` files is enough to force the generation of new strings, however if that does not happen, you can run the following command in the terminal: `flutter gen-l10n`.
+Usually the process of including a new string in `.arb` files is enough to force the generation of new strings, however if that does not happen, you can run the following command in the terminal to force it: `flutter gen-l10n`.
 
 ### Adding Supported Locales
 
