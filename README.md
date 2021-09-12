@@ -161,3 +161,12 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     }
 }
 ```
+
+## Planned improvements 🔮
+
+- [ ] Fake Auth
+- [ ] Search
+- [ ] Local Cache
+- [ ] Handle diff screen sizes
+- [ ] Optimize for the Web and Desktop
+- [ ] Use Navigation 2.0
