@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'core/presentation/app_widget.dart';
 import 'core/shared/environment/environment_config.dart';
@@ -15,5 +16,5 @@ void main() {
     ),
   );
 
-  runApp(AppWidget());
+  runApp(ProviderScope(child: AppWidget()));
 }
