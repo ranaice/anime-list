@@ -19,13 +19,11 @@ class _$UpcomingAnimeEntityTearOff {
   _UpcomingAnimeEntity call(
       {required int id,
       required String name,
-      required double score,
       required String year,
       required String imageUrl}) {
     return _UpcomingAnimeEntity(
       id: id,
       name: name,
-      score: score,
       year: year,
       imageUrl: imageUrl,
     );
@@ -39,7 +37,6 @@ const $UpcomingAnimeEntity = _$UpcomingAnimeEntityTearOff();
 mixin _$UpcomingAnimeEntity {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  double get score => throw _privateConstructorUsedError;
   String get year => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
 
@@ -53,7 +50,7 @@ abstract class $UpcomingAnimeEntityCopyWith<$Res> {
   factory $UpcomingAnimeEntityCopyWith(
           UpcomingAnimeEntity value, $Res Function(UpcomingAnimeEntity) then) =
       _$UpcomingAnimeEntityCopyWithImpl<$Res>;
-  $Res call({int id, String name, double score, String year, String imageUrl});
+  $Res call({int id, String name, String year, String imageUrl});
 }
 
 /// @nodoc
@@ -69,7 +66,6 @@ class _$UpcomingAnimeEntityCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
-    Object? score = freezed,
     Object? year = freezed,
     Object? imageUrl = freezed,
   }) {
@@ -82,10 +78,6 @@ class _$UpcomingAnimeEntityCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      score: score == freezed
-          ? _value.score
-          : score // ignore: cast_nullable_to_non_nullable
-              as double,
       year: year == freezed
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -105,7 +97,7 @@ abstract class _$UpcomingAnimeEntityCopyWith<$Res>
           $Res Function(_UpcomingAnimeEntity) then) =
       __$UpcomingAnimeEntityCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String name, double score, String year, String imageUrl});
+  $Res call({int id, String name, String year, String imageUrl});
 }
 
 /// @nodoc
@@ -123,7 +115,6 @@ class __$UpcomingAnimeEntityCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
-    Object? score = freezed,
     Object? year = freezed,
     Object? imageUrl = freezed,
   }) {
@@ -136,10 +127,6 @@ class __$UpcomingAnimeEntityCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      score: score == freezed
-          ? _value.score
-          : score // ignore: cast_nullable_to_non_nullable
-              as double,
       year: year == freezed
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -158,7 +145,6 @@ class _$_UpcomingAnimeEntity implements _UpcomingAnimeEntity {
   const _$_UpcomingAnimeEntity(
       {required this.id,
       required this.name,
-      required this.score,
       required this.year,
       required this.imageUrl});
 
@@ -167,15 +153,13 @@ class _$_UpcomingAnimeEntity implements _UpcomingAnimeEntity {
   @override
   final String name;
   @override
-  final double score;
-  @override
   final String year;
   @override
   final String imageUrl;
 
   @override
   String toString() {
-    return 'UpcomingAnimeEntity(id: $id, name: $name, score: $score, year: $year, imageUrl: $imageUrl)';
+    return 'UpcomingAnimeEntity(id: $id, name: $name, year: $year, imageUrl: $imageUrl)';
   }
 
   @override
@@ -186,8 +170,6 @@ class _$_UpcomingAnimeEntity implements _UpcomingAnimeEntity {
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.score, score) ||
-                const DeepCollectionEquality().equals(other.score, score)) &&
             (identical(other.year, year) ||
                 const DeepCollectionEquality().equals(other.year, year)) &&
             (identical(other.imageUrl, imageUrl) ||
@@ -200,7 +182,6 @@ class _$_UpcomingAnimeEntity implements _UpcomingAnimeEntity {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(score) ^
       const DeepCollectionEquality().hash(year) ^
       const DeepCollectionEquality().hash(imageUrl);
 
@@ -215,7 +196,6 @@ abstract class _UpcomingAnimeEntity implements UpcomingAnimeEntity {
   const factory _UpcomingAnimeEntity(
       {required int id,
       required String name,
-      required double score,
       required String year,
       required String imageUrl}) = _$_UpcomingAnimeEntity;
 
@@ -223,8 +203,6 @@ abstract class _UpcomingAnimeEntity implements UpcomingAnimeEntity {
   int get id => throw _privateConstructorUsedError;
   @override
   String get name => throw _privateConstructorUsedError;
-  @override
-  double get score => throw _privateConstructorUsedError;
   @override
   String get year => throw _privateConstructorUsedError;
   @override
