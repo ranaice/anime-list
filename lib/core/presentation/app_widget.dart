@@ -22,21 +22,3 @@ class AppWidget extends StatelessWidget {
     );
   }
 }
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(context.l10n.appName),
-      ),
-      body: Center(
-        child: Container(
-          child: Text('Hello World'),
-        ),
-      ),
-    );
-  }
-}
