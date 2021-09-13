@@ -1,9 +1,16 @@
 import 'package:dartz/dartz.dart';
 
-abstract class RemoteClient<L, R> {
-  Future<Either<L, R>> request({
+import 'remote_failure.dart';
+
+abstract class RemoteClient {
+  Future<Either<RemoteFailure, dynamic>> request({
     required String path,
     required String method,
-    Map? body,
+    Map<String, dynamic>? queryParams,
+    Map<String, String> headers = const {
+      'content-type': 'application/json',
+      'accept': 'application/json',
+    },
+    dynamic body,
   });
 }
