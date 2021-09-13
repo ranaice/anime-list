@@ -1,4 +1,8 @@
 {
     "@@locale": "en",
-    "appName": "Anime List"
+    "appName": "Anime List",
+    "userGreeting": "Hey Diana",
+    "currentDate": "Today, 14 September",
+    "upcomingAnimes": "Upcoming",
+    "seasonAnimes": "Current Season"
 }
