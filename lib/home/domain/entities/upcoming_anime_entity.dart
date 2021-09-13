@@ -7,7 +7,7 @@ abstract class UpcomingAnimeEntity with _$UpcomingAnimeEntity {
   const factory UpcomingAnimeEntity({
     required int id,
     required String name,
-    required String year,
+    required String startDate,
     required String imageUrl,
   }) = _UpcomingAnimeEntity;
 }

@@ -19,12 +19,12 @@ class _$UpcomingAnimeEntityTearOff {
   _UpcomingAnimeEntity call(
       {required int id,
       required String name,
-      required String year,
+      required String startDate,
       required String imageUrl}) {
     return _UpcomingAnimeEntity(
       id: id,
       name: name,
-      year: year,
+      startDate: startDate,
       imageUrl: imageUrl,
     );
   }
@@ -37,7 +37,7 @@ const $UpcomingAnimeEntity = _$UpcomingAnimeEntityTearOff();
 mixin _$UpcomingAnimeEntity {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get year => throw _privateConstructorUsedError;
+  String get startDate => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -50,7 +50,7 @@ abstract class $UpcomingAnimeEntityCopyWith<$Res> {
   factory $UpcomingAnimeEntityCopyWith(
           UpcomingAnimeEntity value, $Res Function(UpcomingAnimeEntity) then) =
       _$UpcomingAnimeEntityCopyWithImpl<$Res>;
-  $Res call({int id, String name, String year, String imageUrl});
+  $Res call({int id, String name, String startDate, String imageUrl});
 }
 
 /// @nodoc
@@ -66,7 +66,7 @@ class _$UpcomingAnimeEntityCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
-    Object? year = freezed,
+    Object? startDate = freezed,
     Object? imageUrl = freezed,
   }) {
     return _then(_value.copyWith(
@@ -78,9 +78,9 @@ class _$UpcomingAnimeEntityCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      year: year == freezed
-          ? _value.year
-          : year // ignore: cast_nullable_to_non_nullable
+      startDate: startDate == freezed
+          ? _value.startDate
+          : startDate // ignore: cast_nullable_to_non_nullable
               as String,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
@@ -97,7 +97,7 @@ abstract class _$UpcomingAnimeEntityCopyWith<$Res>
           $Res Function(_UpcomingAnimeEntity) then) =
       __$UpcomingAnimeEntityCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String name, String year, String imageUrl});
+  $Res call({int id, String name, String startDate, String imageUrl});
 }
 
 /// @nodoc
@@ -115,7 +115,7 @@ class __$UpcomingAnimeEntityCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
-    Object? year = freezed,
+    Object? startDate = freezed,
     Object? imageUrl = freezed,
   }) {
     return _then(_UpcomingAnimeEntity(
@@ -127,9 +127,9 @@ class __$UpcomingAnimeEntityCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      year: year == freezed
-          ? _value.year
-          : year // ignore: cast_nullable_to_non_nullable
+      startDate: startDate == freezed
+          ? _value.startDate
+          : startDate // ignore: cast_nullable_to_non_nullable
               as String,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
@@ -145,7 +145,7 @@ class _$_UpcomingAnimeEntity implements _UpcomingAnimeEntity {
   const _$_UpcomingAnimeEntity(
       {required this.id,
       required this.name,
-      required this.year,
+      required this.startDate,
       required this.imageUrl});
 
   @override
@@ -153,13 +153,13 @@ class _$_UpcomingAnimeEntity implements _UpcomingAnimeEntity {
   @override
   final String name;
   @override
-  final String year;
+  final String startDate;
   @override
   final String imageUrl;
 
   @override
   String toString() {
-    return 'UpcomingAnimeEntity(id: $id, name: $name, year: $year, imageUrl: $imageUrl)';
+    return 'UpcomingAnimeEntity(id: $id, name: $name, startDate: $startDate, imageUrl: $imageUrl)';
   }
 
   @override
@@ -170,8 +170,9 @@ class _$_UpcomingAnimeEntity implements _UpcomingAnimeEntity {
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.year, year) ||
-                const DeepCollectionEquality().equals(other.year, year)) &&
+            (identical(other.startDate, startDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.startDate, startDate)) &&
             (identical(other.imageUrl, imageUrl) ||
                 const DeepCollectionEquality()
                     .equals(other.imageUrl, imageUrl)));
@@ -182,7 +183,7 @@ class _$_UpcomingAnimeEntity implements _UpcomingAnimeEntity {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(year) ^
+      const DeepCollectionEquality().hash(startDate) ^
       const DeepCollectionEquality().hash(imageUrl);
 
   @JsonKey(ignore: true)
@@ -196,7 +197,7 @@ abstract class _UpcomingAnimeEntity implements UpcomingAnimeEntity {
   const factory _UpcomingAnimeEntity(
       {required int id,
       required String name,
-      required String year,
+      required String startDate,
       required String imageUrl}) = _$_UpcomingAnimeEntity;
 
   @override
@@ -204,7 +205,7 @@ abstract class _UpcomingAnimeEntity implements UpcomingAnimeEntity {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  String get year => throw _privateConstructorUsedError;
+  String get startDate => throw _privateConstructorUsedError;
   @override
   String get imageUrl => throw _privateConstructorUsedError;
   @override

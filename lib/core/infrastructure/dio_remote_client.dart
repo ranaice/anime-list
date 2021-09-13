@@ -12,7 +12,7 @@ class DioRemoteClient extends RemoteClient {
   DioRemoteClient(this._dio);
 
   @override
-  Future<Either<RemoteFailure, dynamic>> request({
+  Future<Either<RemoteFailure, T?>> request<T>({
     required String path,
     required String method,
     Map<String, dynamic>? queryParams,
@@ -20,11 +20,12 @@ class DioRemoteClient extends RemoteClient {
     dynamic body,
   }) async {
     try {
-      Response<dynamic> response;
+      Response<T> response;
       if (method.toLowerCase() == 'post') {
-        response = await _dio.post(path, queryParameters: queryParams, options: Options(headers: headers), data: body);
+        response =
+            await _dio.post<T>(path, queryParameters: queryParams, options: Options(headers: headers), data: body);
       } else if (method.toLowerCase() == 'get') {
-        response = await _dio.get(path, queryParameters: queryParams, options: Options(headers: headers));
+        response = await _dio.get<T>(path, queryParameters: queryParams, options: Options(headers: headers));
       } else {
         return left(const RemoteFailure.unknown());
       }

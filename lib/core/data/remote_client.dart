@@ -3,7 +3,7 @@ import 'package:dartz/dartz.dart';
 import 'remote_failure.dart';
 
 abstract class RemoteClient {
-  Future<Either<RemoteFailure, dynamic>> request({
+  Future<Either<RemoteFailure, T?>> request<T>({
     required String path,
     required String method,
     Map<String, dynamic>? queryParams,

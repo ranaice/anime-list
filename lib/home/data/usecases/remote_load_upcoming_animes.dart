@@ -1,3 +1,4 @@
+import 'package:anime_list/home/data/models/upcoming_anime_model.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../core/data/remote_client.dart';
@@ -6,13 +7,24 @@ import '../../domain/helpers/load_failure.dart';
 import '../../domain/usecases/load_upcoming_animes.dart';
 
 class RemoteLoadUpcomingAnimes extends LoadUpcomingAnimes {
-  final RemoteClient<LoadFailure, List<UpcomingAnimeEntity>> remoteClient;
+  final RemoteClient remoteClient;
   final String path;
 
   RemoteLoadUpcomingAnimes({required this.remoteClient, required this.path});
 
   @override
   Future<Either<LoadFailure, List<UpcomingAnimeEntity>>> load() async {
-    return remoteClient.request(path: path, method: 'get');
+    final failureOrResponse = await remoteClient.request<Map<String, dynamic>>(
+      path: path,
+      method: 'get',
+    );
+    return failureOrResponse.fold(
+      (l) => left(const LoadFailure.server()),
+      (r) {
+        final onlyTop = r?['top'] as List;
+        final animes = onlyTop.map((e) => UpcomingAnimeModel.fromJson(e as Map<String, dynamic>).toEntity()).toList();
+        return right(animes);
+      },
+    );
   }
 }
