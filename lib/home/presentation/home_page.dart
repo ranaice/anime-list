@@ -5,7 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/presentation/themes/styles.dart';
 import 'widgets/common/bottom_bar.dart';
 import 'widgets/common/home_header.dart';
-import 'widgets/upcoming_animes_section.dart';
+import 'widgets/season/season_animes_section.dart';
+import 'widgets/upcoming/upcoming_animes_section.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class HomePage extends ConsumerWidget {
                 child: HomeHeader(),
               ),
               SizedBox(height: Dimensions.l),
-              UpcomingAnimesSection(),
+              SeasonAnimesSection(),
               SizedBox(height: Dimensions.xxl),
               UpcomingAnimesSection(),
             ],
