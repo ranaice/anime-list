@@ -39,9 +39,13 @@ $ flutter run --flavor prod --target lib/main_production.dart
 
 ## Architecture Overview 🧮
 
+<img src="https://user-images.githubusercontent.com/9071263/133200855-3bbd356f-a7a9-4296-9dd8-77386fc0f35e.jpg" width="400"/>
+
 ### Domain
 
-### Infra
+### Data
+
+### Infrastructure
 
 ### Application
 
