@@ -1,7 +1,4 @@
 Map<String, dynamic> get rawUpcomingResponse => {
-      "request_hash": "request:top:3506eaba6445f7ad5cc2f78417bf6ed916b6aaad",
-      "request_cached": true,
-      "request_cache_expiry": 152331,
       "top": [
         {
           "mal_id": 40356,
