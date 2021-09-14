@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../core/presentation/themes/styles.dart';
+import '../../../../core/presentation/themes/styles.dart';
 
 class PlaceholderShimmerCard extends StatefulWidget {
   const PlaceholderShimmerCard({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _PlaceholderCardState extends State<PlaceholderShimmerCard> {
       baseColor: Theme.of(context).colorScheme.surface,
       highlightColor: Theme.of(context).colorScheme.background,
       child: ConstrainedBox(
-        constraints: const BoxConstraints(minWidth: 200, minHeight: 300),
+        constraints: const BoxConstraints(minWidth: 170, minHeight: 300),
         child: Card(
           shape: const RoundedRectangleBorder(
             borderRadius: CornersSizes.largeBorderRadius,
