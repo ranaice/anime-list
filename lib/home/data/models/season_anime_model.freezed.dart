@@ -23,12 +23,12 @@ class _$SeasonAnimeModelTearOff {
   _SeasonAnimeModel call(
       {@JsonKey(name: 'mal_id') required int id,
       required String title,
-      required double score,
-      required int episodes,
-      required List<GenreModel> genres,
+      double? score,
+      int? episodes,
+      List<GenreModel>? genres,
       @JsonKey(name: 'image_url') required String imageUrl,
-      required String synopsis,
-      required String source}) {
+      String? synopsis,
+      String? source}) {
     return _SeasonAnimeModel(
       id: id,
       title: title,
@@ -54,13 +54,13 @@ mixin _$SeasonAnimeModel {
   @JsonKey(name: 'mal_id')
   int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  double get score => throw _privateConstructorUsedError;
-  int get episodes => throw _privateConstructorUsedError;
-  List<GenreModel> get genres => throw _privateConstructorUsedError;
+  double? get score => throw _privateConstructorUsedError;
+  int? get episodes => throw _privateConstructorUsedError;
+  List<GenreModel>? get genres => throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
   String get imageUrl => throw _privateConstructorUsedError;
-  String get synopsis => throw _privateConstructorUsedError;
-  String get source => throw _privateConstructorUsedError;
+  String? get synopsis => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -76,12 +76,12 @@ abstract class $SeasonAnimeModelCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'mal_id') int id,
       String title,
-      double score,
-      int episodes,
-      List<GenreModel> genres,
+      double? score,
+      int? episodes,
+      List<GenreModel>? genres,
       @JsonKey(name: 'image_url') String imageUrl,
-      String synopsis,
-      String source});
+      String? synopsis,
+      String? source});
 }
 
 /// @nodoc
@@ -116,15 +116,15 @@ class _$SeasonAnimeModelCopyWithImpl<$Res>
       score: score == freezed
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       episodes: episodes == freezed
           ? _value.episodes
           : episodes // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       genres: genres == freezed
           ? _value.genres
           : genres // ignore: cast_nullable_to_non_nullable
-              as List<GenreModel>,
+              as List<GenreModel>?,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -132,11 +132,11 @@ class _$SeasonAnimeModelCopyWithImpl<$Res>
       synopsis: synopsis == freezed
           ? _value.synopsis
           : synopsis // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       source: source == freezed
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -151,12 +151,12 @@ abstract class _$SeasonAnimeModelCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'mal_id') int id,
       String title,
-      double score,
-      int episodes,
-      List<GenreModel> genres,
+      double? score,
+      int? episodes,
+      List<GenreModel>? genres,
       @JsonKey(name: 'image_url') String imageUrl,
-      String synopsis,
-      String source});
+      String? synopsis,
+      String? source});
 }
 
 /// @nodoc
@@ -193,15 +193,15 @@ class __$SeasonAnimeModelCopyWithImpl<$Res>
       score: score == freezed
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
-              as double,
+              as double?,
       episodes: episodes == freezed
           ? _value.episodes
           : episodes // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       genres: genres == freezed
           ? _value.genres
           : genres // ignore: cast_nullable_to_non_nullable
-              as List<GenreModel>,
+              as List<GenreModel>?,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -209,11 +209,11 @@ class __$SeasonAnimeModelCopyWithImpl<$Res>
       synopsis: synopsis == freezed
           ? _value.synopsis
           : synopsis // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       source: source == freezed
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -224,12 +224,12 @@ class _$_SeasonAnimeModel extends _SeasonAnimeModel {
   const _$_SeasonAnimeModel(
       {@JsonKey(name: 'mal_id') required this.id,
       required this.title,
-      required this.score,
-      required this.episodes,
-      required this.genres,
+      this.score,
+      this.episodes,
+      this.genres,
       @JsonKey(name: 'image_url') required this.imageUrl,
-      required this.synopsis,
-      required this.source})
+      this.synopsis,
+      this.source})
       : super._();
 
   factory _$_SeasonAnimeModel.fromJson(Map<String, dynamic> json) =>
@@ -241,18 +241,18 @@ class _$_SeasonAnimeModel extends _SeasonAnimeModel {
   @override
   final String title;
   @override
-  final double score;
+  final double? score;
   @override
-  final int episodes;
+  final int? episodes;
   @override
-  final List<GenreModel> genres;
+  final List<GenreModel>? genres;
   @override
   @JsonKey(name: 'image_url')
   final String imageUrl;
   @override
-  final String synopsis;
+  final String? synopsis;
   @override
-  final String source;
+  final String? source;
 
   @override
   String toString() {
@@ -311,12 +311,12 @@ abstract class _SeasonAnimeModel extends SeasonAnimeModel {
   const factory _SeasonAnimeModel(
       {@JsonKey(name: 'mal_id') required int id,
       required String title,
-      required double score,
-      required int episodes,
-      required List<GenreModel> genres,
+      double? score,
+      int? episodes,
+      List<GenreModel>? genres,
       @JsonKey(name: 'image_url') required String imageUrl,
-      required String synopsis,
-      required String source}) = _$_SeasonAnimeModel;
+      String? synopsis,
+      String? source}) = _$_SeasonAnimeModel;
   const _SeasonAnimeModel._() : super._();
 
   factory _SeasonAnimeModel.fromJson(Map<String, dynamic> json) =
@@ -328,18 +328,18 @@ abstract class _SeasonAnimeModel extends SeasonAnimeModel {
   @override
   String get title => throw _privateConstructorUsedError;
   @override
-  double get score => throw _privateConstructorUsedError;
+  double? get score => throw _privateConstructorUsedError;
   @override
-  int get episodes => throw _privateConstructorUsedError;
+  int? get episodes => throw _privateConstructorUsedError;
   @override
-  List<GenreModel> get genres => throw _privateConstructorUsedError;
+  List<GenreModel>? get genres => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'image_url')
   String get imageUrl => throw _privateConstructorUsedError;
   @override
-  String get synopsis => throw _privateConstructorUsedError;
+  String? get synopsis => throw _privateConstructorUsedError;
   @override
-  String get source => throw _privateConstructorUsedError;
+  String? get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SeasonAnimeModelCopyWith<_SeasonAnimeModel> get copyWith =>

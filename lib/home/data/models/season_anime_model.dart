@@ -14,12 +14,12 @@ abstract class SeasonAnimeModel with _$SeasonAnimeModel {
   const factory SeasonAnimeModel({
     @JsonKey(name: 'mal_id') required int id,
     required String title,
-    required double score,
-    required int episodes,
-    required List<GenreModel> genres,
+    double? score,
+    int? episodes,
+    List<GenreModel>? genres,
     @JsonKey(name: 'image_url') required String imageUrl,
-    required String synopsis,
-    required String source,
+    String? synopsis,
+    String? source,
   }) = _SeasonAnimeModel;
 
   factory SeasonAnimeModel.fromJson(Map<String, dynamic> json) => _$SeasonAnimeModelFromJson(json);
@@ -28,12 +28,12 @@ abstract class SeasonAnimeModel with _$SeasonAnimeModel {
     return SeasonAnimeEntity(
       id: id,
       name: title,
-      score: score,
-      genres: genres.map((e) => e.toEntity()).toList(),
-      totalEpisodes: episodes,
+      score: score ?? 0,
+      genres: genres?.map((e) => e.toEntity()).toList() ?? [],
+      totalEpisodes: episodes ?? 0,
       imageUrl: imageUrl,
-      synopsis: synopsis,
-      source: source,
+      synopsis: synopsis ?? '',
+      source: source ?? '',
     );
   }
 }

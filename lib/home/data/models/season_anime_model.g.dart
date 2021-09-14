@@ -10,14 +10,14 @@ _$_SeasonAnimeModel _$_$_SeasonAnimeModelFromJson(Map<String, dynamic> json) {
   return _$_SeasonAnimeModel(
     id: json['mal_id'] as int,
     title: json['title'] as String,
-    score: (json['score'] as num).toDouble(),
-    episodes: json['episodes'] as int,
-    genres: (json['genres'] as List<dynamic>)
-        .map((e) => GenreModel.fromJson(e as Map<String, dynamic>))
+    score: (json['score'] as num?)?.toDouble(),
+    episodes: json['episodes'] as int?,
+    genres: (json['genres'] as List<dynamic>?)
+        ?.map((e) => GenreModel.fromJson(e as Map<String, dynamic>))
         .toList(),
     imageUrl: json['image_url'] as String,
-    synopsis: json['synopsis'] as String,
-    source: json['source'] as String,
+    synopsis: json['synopsis'] as String?,
+    source: json['source'] as String?,
   );
 }
 
