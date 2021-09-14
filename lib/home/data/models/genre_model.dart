@@ -17,6 +17,7 @@ abstract class GenreModel with _$GenreModel {
 
   factory GenreModel.fromJson(Map<String, dynamic> json) => _$GenreModelFromJson(json);
 
+  // TODO Require Testss
   GenreEntity toEntity() {
     return GenreEntity(id: id, name: name);
   }

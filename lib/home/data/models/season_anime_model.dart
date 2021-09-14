@@ -24,6 +24,7 @@ abstract class SeasonAnimeModel with _$SeasonAnimeModel {
 
   factory SeasonAnimeModel.fromJson(Map<String, dynamic> json) => _$SeasonAnimeModelFromJson(json);
 
+  // TODO Require Testss
   SeasonAnimeEntity toEntity() {
     return SeasonAnimeEntity(
       id: id,

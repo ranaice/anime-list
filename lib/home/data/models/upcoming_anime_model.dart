@@ -19,6 +19,7 @@ class UpcomingAnimeModel with _$UpcomingAnimeModel {
 
   factory UpcomingAnimeModel.fromJson(Map<String, dynamic> json) => _$UpcomingAnimeModelFromJson(json);
 
+  // TODO Require Tests
   UpcomingAnimeEntity toEntity() {
     return UpcomingAnimeEntity(id: id, name: title, startDate: startDate ?? '', imageUrl: imageUrl);
   }
