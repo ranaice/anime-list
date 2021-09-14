@@ -22,9 +22,13 @@ class RemoteLoadSeasonAnimes extends LoadSeasonAnimes {
     return failureOrResponse.fold(
       (l) => left(const LoadFailure.server()),
       (r) {
-        final onlyTop = r?['top'] as List;
-        final animes = onlyTop.map((e) => SeasonAnimeModel.fromJson(e as Map<String, dynamic>).toEntity()).toList();
-        return right(animes);
+        try {
+          final onlyTop = r?['anime'] as List;
+          final animes = onlyTop.map((e) => SeasonAnimeModel.fromJson(e as Map<String, dynamic>).toEntity()).toList();
+          return right(animes);
+        } catch (e) {
+          return left(const LoadFailure.server());
+        }
       },
     );
   }

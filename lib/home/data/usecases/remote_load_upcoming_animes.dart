@@ -21,9 +21,13 @@ class RemoteLoadUpcomingAnimes extends LoadUpcomingAnimes {
     return failureOrResponse.fold(
       (l) => left(const LoadFailure.server()),
       (r) {
-        final onlyTop = r?['top'] as List;
-        final animes = onlyTop.map((e) => UpcomingAnimeModel.fromJson(e as Map<String, dynamic>).toEntity()).toList();
-        return right(animes);
+        try {
+          final onlyTop = r?['top'] as List;
+          final animes = onlyTop.map((e) => UpcomingAnimeModel.fromJson(e as Map<String, dynamic>).toEntity()).toList();
+          return right(animes);
+        } catch (e) {
+          return left(const LoadFailure.server());
+        }
       },
     );
   }
