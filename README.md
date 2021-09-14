@@ -1,17 +1,25 @@
 # Anime List
 
+A sample app to list currrent and upcoming animes. 
+The goal of this application is to provide an example approach to using Clean Architecture and SOLID.
+
+The design was based on this awesome work [cinema_app].
+
+<img src="https://user-images.githubusercontent.com/9071263/133199727-b708b1a3-6956-4f75-8325-255f3cdb035c.png" width="200"/>
+
+
 ## Getting Started 🚀
 
-We currently support only one environment/flavor, which is `development`, but in a real world project we would probably 
-have at least 3 environments:
+We currently support a single environment/flavor (`development`) but in a real world project we would 
+have at least 3:
 
 - development
 - staging
 - production
 
-Since we only have one enviroment, we are fine having a single `main.dart` file.
+Since we only have one environment, we are fine having a single `main.dart` file.
 
-If we defined 3 envinroments, we would need 3 enviroment files, one for each environment, for example:
+If we defined 3 environments, we would need 3 files, one for each environment:
 - `main_development.dart`
 - `main_staging.dart`
 - `main_production.dart`
@@ -31,9 +39,13 @@ $ flutter run --flavor prod --target lib/main_production.dart
 
 ## Architecture Overview 🧮
 
+<img src="https://user-images.githubusercontent.com/9071263/133200855-3bbd356f-a7a9-4296-9dd8-77386fc0f35e.jpg" width="400"/>
+
 ### Domain
 
-### Infra
+### Data
+
+### Infrastructure
 
 ### Application
 
@@ -67,7 +79,7 @@ This project relies on [flutter_localizations][flutter_localizations_link] and f
 
 ### Adding Strings
 
-1. To add a new localizable string, open the `app_en.arb` file at `lib/l10n/arb/app_en.arb`.
+1. To add a new localizable string, open the `app_en.arb` file at `lib/core/presentation/l10n/arb/app_en.arb`.
 
 ```arb
 {
@@ -98,7 +110,7 @@ This project relies on [flutter_localizations][flutter_localizations_link] and f
 3. Use the new string
 
 ```dart
-import 'package:anime_list/l10n/l10n.dart';
+import 'package:anime_list/core/presentation/l10n/l10n.dart';
 
 @override
 Widget build(BuildContext context) {
@@ -119,7 +131,7 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     <key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>
-		<string>es</string>
+		<string>pt</string>
 	</array>
 
     ...
@@ -127,13 +139,15 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 
 ### Adding Translations
 
-1. For each supported locale, add a new ARB file in `lib/l10n/arb`.
+1. For each supported locale, add a new ARB file in `lib/core/presentation/l10n/arb`.
 
 ```
-├── l10n
-│   ├── arb
-│   │   ├── app_en.arb
-│   │   └── app_es.arb
+├── core 
+│   ├── presentation
+│   │   ├── l10n
+│   │   │   ├── arb
+│   │   │   │   ├── app_en.arb
+│   │   │   │   └── app_pt.arb
 ```
 
 2. Add the translated strings to each `.arb` file:
@@ -150,14 +164,14 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 }
 ```
 
-`app_es.arb`
+`app_pt.arb`
 
 ```arb
 {
-    "@@locale": "es",
+    "@@locale": "pt",
     "counterAppBarTitle": "Contador",
     "@counterAppBarTitle": {
-        "description": "Texto mostrado en la AppBar de la página del contador"
+        "description": "Texto mostrado na AppBar da página do contador"
     }
 }
 ```
@@ -178,3 +192,4 @@ README based on the [Very Good CLI][very_good_cli_link]
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
 [very_good_cli_link]: https://github.com/VeryGoodOpenSource/very_good_cli
+[cinema_app]: https://dribbble.com/shots/15189116-Cinema-App
