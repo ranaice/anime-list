@@ -1,16 +1,16 @@
-import 'package:anime_list/core/data/remote_client.dart';
 import 'package:anime_list/core/data/remote_failure.dart';
-import 'package:anime_list/home/data/usecases/remote_load_upcoming_animes.dart';
+import 'package:anime_list/home/data/usecases/remote_load_season_animes.dart';
 import 'package:anime_list/home/domain/helpers/load_failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'upcoming_anime_fixture.dart';
+import 'remote_client_mock.dart';
+import 'season_animes_fixture.dart';
 
 void main() {
-  late RemoteLoadUpcomingAnimes sut;
+  late RemoteLoadSeasonAnimes sut;
   late MockRemoteClient remoteClient;
   late String path;
 
@@ -21,14 +21,14 @@ void main() {
   }
 
   void mockFailure(RemoteFailure remoteFailure) => mockRequest().thenAnswer(
-        (invocation) async => left<RemoteFailure, Map<String, dynamic>?>(remoteFailure),
+        (_) async => left<RemoteFailure, Map<String, dynamic>?>(remoteFailure),
       );
 
   setUp(() {
     path = faker.internet.httpsUrl();
     remoteClient = MockRemoteClient();
-    sut = RemoteLoadUpcomingAnimes(path: path, remoteClient: remoteClient);
-    mockSuccessResponse(rawUpcomingResponse);
+    sut = RemoteLoadSeasonAnimes(path: path, remoteClient: remoteClient);
+    mockSuccessResponse(rawSeasonResponse);
   });
 
   test('Should call RemoteClient with correct params', () async {
@@ -69,5 +69,3 @@ void main() {
     expect(failure, left(const LoadFailure.server()));
   });
 }
-
-class MockRemoteClient extends Mock implements RemoteClient {}

@@ -1,20 +1,3 @@
-import 'package:faker/faker.dart';
-
-List<Map<String, dynamic>> mockValidData = [
-  {
-    "mal_id": faker.randomGenerator.integer(10000),
-    "title": faker.person.name(),
-    "image_url": faker.internet.httpUrl(),
-    "start_date": "Apr 2022"
-  },
-  {
-    "mal_id": faker.randomGenerator.integer(10000),
-    "title": faker.person.name(),
-    "image_url": faker.internet.httpUrl(),
-    "start_date": "Apr 2022"
-  },
-];
-
 Map<String, dynamic> get rawUpcomingResponse => {
       "request_hash": "request:top:3506eaba6445f7ad5cc2f78417bf6ed916b6aaad",
       "request_cached": true,
