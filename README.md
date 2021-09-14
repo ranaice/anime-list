@@ -1,5 +1,13 @@
 # Anime List
 
+A sample app to list currrent and upcoming animes. 
+The goal of this application is to provide an example approach to using Clean Architecture and SOLID.
+
+The design was based on this awesome work [cinema_app].
+
+<img src="https://user-images.githubusercontent.com/9071263/133199727-b708b1a3-6956-4f75-8325-255f3cdb035c.png" width="200"/>
+
+
 ## Getting Started 🚀
 
 We currently support only one environment/flavor, which is `development`, but in a real world project we would probably 
@@ -178,3 +186,4 @@ README based on the [Very Good CLI][very_good_cli_link]
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
 [very_good_cli_link]: https://github.com/VeryGoodOpenSource/very_good_cli
+[cinema_app]: https://dribbble.com/shots/15189116-Cinema-App
