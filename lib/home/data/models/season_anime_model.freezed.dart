@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'season_anime_entity.dart';
+part of 'season_anime_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,83 +12,94 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-/// @nodoc
-class _$SeasonAnimeEntityTearOff {
-  const _$SeasonAnimeEntityTearOff();
+SeasonAnimeModel _$SeasonAnimeModelFromJson(Map<String, dynamic> json) {
+  return _SeasonAnimeModel.fromJson(json);
+}
 
-  _SeasonAnimeEntity call(
-      {required int id,
-      required String name,
+/// @nodoc
+class _$SeasonAnimeModelTearOff {
+  const _$SeasonAnimeModelTearOff();
+
+  _SeasonAnimeModel call(
+      {@JsonKey(name: 'mal_id') required int id,
+      required String title,
       required double score,
-      required List<GenreEntity> genres,
-      required int totalEpisodes,
-      required String imageUrl,
+      required int episodes,
+      required List<GenreModel> genres,
+      @JsonKey(name: 'image_url') required String imageUrl,
       required String synopsis,
       required String source}) {
-    return _SeasonAnimeEntity(
+    return _SeasonAnimeModel(
       id: id,
-      name: name,
+      title: title,
       score: score,
+      episodes: episodes,
       genres: genres,
-      totalEpisodes: totalEpisodes,
       imageUrl: imageUrl,
       synopsis: synopsis,
       source: source,
     );
   }
+
+  SeasonAnimeModel fromJson(Map<String, Object> json) {
+    return SeasonAnimeModel.fromJson(json);
+  }
 }
 
 /// @nodoc
-const $SeasonAnimeEntity = _$SeasonAnimeEntityTearOff();
+const $SeasonAnimeModel = _$SeasonAnimeModelTearOff();
 
 /// @nodoc
-mixin _$SeasonAnimeEntity {
+mixin _$SeasonAnimeModel {
+  @JsonKey(name: 'mal_id')
   int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   double get score => throw _privateConstructorUsedError;
-  List<GenreEntity> get genres => throw _privateConstructorUsedError;
-  int get totalEpisodes => throw _privateConstructorUsedError;
+  int get episodes => throw _privateConstructorUsedError;
+  List<GenreModel> get genres => throw _privateConstructorUsedError;
+  @JsonKey(name: 'image_url')
   String get imageUrl => throw _privateConstructorUsedError;
   String get synopsis => throw _privateConstructorUsedError;
   String get source => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SeasonAnimeEntityCopyWith<SeasonAnimeEntity> get copyWith =>
+  $SeasonAnimeModelCopyWith<SeasonAnimeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SeasonAnimeEntityCopyWith<$Res> {
-  factory $SeasonAnimeEntityCopyWith(
-          SeasonAnimeEntity value, $Res Function(SeasonAnimeEntity) then) =
-      _$SeasonAnimeEntityCopyWithImpl<$Res>;
+abstract class $SeasonAnimeModelCopyWith<$Res> {
+  factory $SeasonAnimeModelCopyWith(
+          SeasonAnimeModel value, $Res Function(SeasonAnimeModel) then) =
+      _$SeasonAnimeModelCopyWithImpl<$Res>;
   $Res call(
-      {int id,
-      String name,
+      {@JsonKey(name: 'mal_id') int id,
+      String title,
       double score,
-      List<GenreEntity> genres,
-      int totalEpisodes,
-      String imageUrl,
+      int episodes,
+      List<GenreModel> genres,
+      @JsonKey(name: 'image_url') String imageUrl,
       String synopsis,
       String source});
 }
 
 /// @nodoc
-class _$SeasonAnimeEntityCopyWithImpl<$Res>
-    implements $SeasonAnimeEntityCopyWith<$Res> {
-  _$SeasonAnimeEntityCopyWithImpl(this._value, this._then);
+class _$SeasonAnimeModelCopyWithImpl<$Res>
+    implements $SeasonAnimeModelCopyWith<$Res> {
+  _$SeasonAnimeModelCopyWithImpl(this._value, this._then);
 
-  final SeasonAnimeEntity _value;
+  final SeasonAnimeModel _value;
   // ignore: unused_field
-  final $Res Function(SeasonAnimeEntity) _then;
+  final $Res Function(SeasonAnimeModel) _then;
 
   @override
   $Res call({
     Object? id = freezed,
-    Object? name = freezed,
+    Object? title = freezed,
     Object? score = freezed,
+    Object? episodes = freezed,
     Object? genres = freezed,
-    Object? totalEpisodes = freezed,
     Object? imageUrl = freezed,
     Object? synopsis = freezed,
     Object? source = freezed,
@@ -98,22 +109,22 @@ class _$SeasonAnimeEntityCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
       score: score == freezed
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as double,
+      episodes: episodes == freezed
+          ? _value.episodes
+          : episodes // ignore: cast_nullable_to_non_nullable
+              as int,
       genres: genres == freezed
           ? _value.genres
           : genres // ignore: cast_nullable_to_non_nullable
-              as List<GenreEntity>,
-      totalEpisodes: totalEpisodes == freezed
-          ? _value.totalEpisodes
-          : totalEpisodes // ignore: cast_nullable_to_non_nullable
-              as int,
+              as List<GenreModel>,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -131,66 +142,66 @@ class _$SeasonAnimeEntityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SeasonAnimeEntityCopyWith<$Res>
-    implements $SeasonAnimeEntityCopyWith<$Res> {
-  factory _$SeasonAnimeEntityCopyWith(
-          _SeasonAnimeEntity value, $Res Function(_SeasonAnimeEntity) then) =
-      __$SeasonAnimeEntityCopyWithImpl<$Res>;
+abstract class _$SeasonAnimeModelCopyWith<$Res>
+    implements $SeasonAnimeModelCopyWith<$Res> {
+  factory _$SeasonAnimeModelCopyWith(
+          _SeasonAnimeModel value, $Res Function(_SeasonAnimeModel) then) =
+      __$SeasonAnimeModelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id,
-      String name,
+      {@JsonKey(name: 'mal_id') int id,
+      String title,
       double score,
-      List<GenreEntity> genres,
-      int totalEpisodes,
-      String imageUrl,
+      int episodes,
+      List<GenreModel> genres,
+      @JsonKey(name: 'image_url') String imageUrl,
       String synopsis,
       String source});
 }
 
 /// @nodoc
-class __$SeasonAnimeEntityCopyWithImpl<$Res>
-    extends _$SeasonAnimeEntityCopyWithImpl<$Res>
-    implements _$SeasonAnimeEntityCopyWith<$Res> {
-  __$SeasonAnimeEntityCopyWithImpl(
-      _SeasonAnimeEntity _value, $Res Function(_SeasonAnimeEntity) _then)
-      : super(_value, (v) => _then(v as _SeasonAnimeEntity));
+class __$SeasonAnimeModelCopyWithImpl<$Res>
+    extends _$SeasonAnimeModelCopyWithImpl<$Res>
+    implements _$SeasonAnimeModelCopyWith<$Res> {
+  __$SeasonAnimeModelCopyWithImpl(
+      _SeasonAnimeModel _value, $Res Function(_SeasonAnimeModel) _then)
+      : super(_value, (v) => _then(v as _SeasonAnimeModel));
 
   @override
-  _SeasonAnimeEntity get _value => super._value as _SeasonAnimeEntity;
+  _SeasonAnimeModel get _value => super._value as _SeasonAnimeModel;
 
   @override
   $Res call({
     Object? id = freezed,
-    Object? name = freezed,
+    Object? title = freezed,
     Object? score = freezed,
+    Object? episodes = freezed,
     Object? genres = freezed,
-    Object? totalEpisodes = freezed,
     Object? imageUrl = freezed,
     Object? synopsis = freezed,
     Object? source = freezed,
   }) {
-    return _then(_SeasonAnimeEntity(
+    return _then(_SeasonAnimeModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
       score: score == freezed
           ? _value.score
           : score // ignore: cast_nullable_to_non_nullable
               as double,
+      episodes: episodes == freezed
+          ? _value.episodes
+          : episodes // ignore: cast_nullable_to_non_nullable
+              as int,
       genres: genres == freezed
           ? _value.genres
           : genres // ignore: cast_nullable_to_non_nullable
-              as List<GenreEntity>,
-      totalEpisodes: totalEpisodes == freezed
-          ? _value.totalEpisodes
-          : totalEpisodes // ignore: cast_nullable_to_non_nullable
-              as int,
+              as List<GenreModel>,
       imageUrl: imageUrl == freezed
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -208,29 +219,35 @@ class __$SeasonAnimeEntityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
-class _$_SeasonAnimeEntity implements _SeasonAnimeEntity {
-  const _$_SeasonAnimeEntity(
-      {required this.id,
-      required this.name,
+@JsonSerializable()
+class _$_SeasonAnimeModel extends _SeasonAnimeModel {
+  const _$_SeasonAnimeModel(
+      {@JsonKey(name: 'mal_id') required this.id,
+      required this.title,
       required this.score,
+      required this.episodes,
       required this.genres,
-      required this.totalEpisodes,
-      required this.imageUrl,
+      @JsonKey(name: 'image_url') required this.imageUrl,
       required this.synopsis,
-      required this.source});
+      required this.source})
+      : super._();
+
+  factory _$_SeasonAnimeModel.fromJson(Map<String, dynamic> json) =>
+      _$_$_SeasonAnimeModelFromJson(json);
 
   @override
+  @JsonKey(name: 'mal_id')
   final int id;
   @override
-  final String name;
+  final String title;
   @override
   final double score;
   @override
-  final List<GenreEntity> genres;
+  final int episodes;
   @override
-  final int totalEpisodes;
+  final List<GenreModel> genres;
   @override
+  @JsonKey(name: 'image_url')
   final String imageUrl;
   @override
   final String synopsis;
@@ -239,24 +256,24 @@ class _$_SeasonAnimeEntity implements _SeasonAnimeEntity {
 
   @override
   String toString() {
-    return 'SeasonAnimeEntity(id: $id, name: $name, score: $score, genres: $genres, totalEpisodes: $totalEpisodes, imageUrl: $imageUrl, synopsis: $synopsis, source: $source)';
+    return 'SeasonAnimeModel(id: $id, title: $title, score: $score, episodes: $episodes, genres: $genres, imageUrl: $imageUrl, synopsis: $synopsis, source: $source)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SeasonAnimeEntity &&
+        (other is _SeasonAnimeModel &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.title, title) ||
+                const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.score, score) ||
                 const DeepCollectionEquality().equals(other.score, score)) &&
+            (identical(other.episodes, episodes) ||
+                const DeepCollectionEquality()
+                    .equals(other.episodes, episodes)) &&
             (identical(other.genres, genres) ||
                 const DeepCollectionEquality().equals(other.genres, genres)) &&
-            (identical(other.totalEpisodes, totalEpisodes) ||
-                const DeepCollectionEquality()
-                    .equals(other.totalEpisodes, totalEpisodes)) &&
             (identical(other.imageUrl, imageUrl) ||
                 const DeepCollectionEquality()
                     .equals(other.imageUrl, imageUrl)) &&
@@ -271,42 +288,53 @@ class _$_SeasonAnimeEntity implements _SeasonAnimeEntity {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(score) ^
+      const DeepCollectionEquality().hash(episodes) ^
       const DeepCollectionEquality().hash(genres) ^
-      const DeepCollectionEquality().hash(totalEpisodes) ^
       const DeepCollectionEquality().hash(imageUrl) ^
       const DeepCollectionEquality().hash(synopsis) ^
       const DeepCollectionEquality().hash(source);
 
   @JsonKey(ignore: true)
   @override
-  _$SeasonAnimeEntityCopyWith<_SeasonAnimeEntity> get copyWith =>
-      __$SeasonAnimeEntityCopyWithImpl<_SeasonAnimeEntity>(this, _$identity);
+  _$SeasonAnimeModelCopyWith<_SeasonAnimeModel> get copyWith =>
+      __$SeasonAnimeModelCopyWithImpl<_SeasonAnimeModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_SeasonAnimeModelToJson(this);
+  }
 }
 
-abstract class _SeasonAnimeEntity implements SeasonAnimeEntity {
-  const factory _SeasonAnimeEntity(
-      {required int id,
-      required String name,
+abstract class _SeasonAnimeModel extends SeasonAnimeModel {
+  const factory _SeasonAnimeModel(
+      {@JsonKey(name: 'mal_id') required int id,
+      required String title,
       required double score,
-      required List<GenreEntity> genres,
-      required int totalEpisodes,
-      required String imageUrl,
+      required int episodes,
+      required List<GenreModel> genres,
+      @JsonKey(name: 'image_url') required String imageUrl,
       required String synopsis,
-      required String source}) = _$_SeasonAnimeEntity;
+      required String source}) = _$_SeasonAnimeModel;
+  const _SeasonAnimeModel._() : super._();
+
+  factory _SeasonAnimeModel.fromJson(Map<String, dynamic> json) =
+      _$_SeasonAnimeModel.fromJson;
 
   @override
+  @JsonKey(name: 'mal_id')
   int get id => throw _privateConstructorUsedError;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   @override
   double get score => throw _privateConstructorUsedError;
   @override
-  List<GenreEntity> get genres => throw _privateConstructorUsedError;
+  int get episodes => throw _privateConstructorUsedError;
   @override
-  int get totalEpisodes => throw _privateConstructorUsedError;
+  List<GenreModel> get genres => throw _privateConstructorUsedError;
   @override
+  @JsonKey(name: 'image_url')
   String get imageUrl => throw _privateConstructorUsedError;
   @override
   String get synopsis => throw _privateConstructorUsedError;
@@ -314,6 +342,6 @@ abstract class _SeasonAnimeEntity implements SeasonAnimeEntity {
   String get source => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SeasonAnimeEntityCopyWith<_SeasonAnimeEntity> get copyWith =>
+  _$SeasonAnimeModelCopyWith<_SeasonAnimeModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -9,7 +9,7 @@ abstract class SeasonAnimeEntity with _$SeasonAnimeEntity {
     required int id,
     required String name,
     required double score,
-    required List<GenreEntity> genre,
+    required List<GenreEntity> genres,
     required int totalEpisodes,
     required String imageUrl,
     required String synopsis,
