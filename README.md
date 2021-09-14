@@ -10,16 +10,16 @@ The design was based on this awesome work [cinema_app].
 
 ## Getting Started 🚀
 
-We currently support only one environment/flavor, which is `development`, but in a real world project we would probably 
-have at least 3 environments:
+We currently support a single environment/flavor (`development`) but in a real world project we would 
+have at least 3:
 
 - development
 - staging
 - production
 
-Since we only have one enviroment, we are fine having a single `main.dart` file.
+Since we only have one environment, we are fine having a single `main.dart` file.
 
-If we defined 3 envinroments, we would need 3 enviroment files, one for each environment, for example:
+If we defined 3 environments, we would need 3 files, one for each environment:
 - `main_development.dart`
 - `main_staging.dart`
 - `main_production.dart`
@@ -79,7 +79,7 @@ This project relies on [flutter_localizations][flutter_localizations_link] and f
 
 ### Adding Strings
 
-1. To add a new localizable string, open the `app_en.arb` file at `lib/l10n/arb/app_en.arb`.
+1. To add a new localizable string, open the `app_en.arb` file at `lib/core/presentation/l10n/arb/app_en.arb`.
 
 ```arb
 {
@@ -110,7 +110,7 @@ This project relies on [flutter_localizations][flutter_localizations_link] and f
 3. Use the new string
 
 ```dart
-import 'package:anime_list/l10n/l10n.dart';
+import 'package:anime_list/core/presentation/l10n/l10n.dart';
 
 @override
 Widget build(BuildContext context) {
@@ -131,7 +131,7 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     <key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>
-		<string>es</string>
+		<string>pt</string>
 	</array>
 
     ...
@@ -139,13 +139,15 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 
 ### Adding Translations
 
-1. For each supported locale, add a new ARB file in `lib/l10n/arb`.
+1. For each supported locale, add a new ARB file in `lib/core/presentation/l10n/arb`.
 
 ```
-├── l10n
-│   ├── arb
-│   │   ├── app_en.arb
-│   │   └── app_es.arb
+├── core 
+│   ├── presentation
+│   │   ├── l10n
+│   │   │   ├── arb
+│   │   │   │   ├── app_en.arb
+│   │   │   │   └── app_pt.arb
 ```
 
 2. Add the translated strings to each `.arb` file:
