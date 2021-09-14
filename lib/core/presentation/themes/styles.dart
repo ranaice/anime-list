@@ -27,7 +27,8 @@ class Dimensions {
   static const double med = 12 * scale;
   static const double l = 16 * scale;
   static const double xl = 24 * scale;
-  static const double xxl = 32 * scale;
+  static const double xxl = 28 * scale;
+  static const double xxxl = 32 * scale;
 }
 
 // App Button sizes

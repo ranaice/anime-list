@@ -1,8 +1,9 @@
-import 'package:anime_list/core/shared/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../core/presentation/l10n/l10n_extensions.dart';
+import '../../core/presentation/themes/styles.dart';
+import '../../core/shared/providers.dart';
+import 'widgets/home_header.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,24 +13,22 @@ class HomePage extends ConsumerWidget {
     final notifier = ref.watch(upcomingAnimesNotifierProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(context.l10n.appName),
-      ),
-      body: Center(
-        child: notifier.when(
-          initial: () => Container(),
-          loading: () => const CircularProgressIndicator(),
-          success: (animes) {
-            return ListView(
-              children: animes
-                  .map((e) => ListTile(
-                        leading: Image.network(e.imageUrl),
-                        title: Text(e.name),
-                      ))
-                  .toList(),
-            );
-          },
-          failure: (failure) => Container(),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(
+          Dimensions.xl,
+          Dimensions.xxl,
+          0,
+          Dimensions.xxl,
+        ),
+        child: SafeArea(
+          child: Column(
+            children: const <Widget>[
+              Padding(
+                padding: EdgeInsets.only(right: Dimensions.xl),
+                child: HomeHeader(),
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(

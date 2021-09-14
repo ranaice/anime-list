@@ -13,6 +13,6 @@ class AppColors {
 
   static const error = Color(0xFFDD5C5C);
 
-  static const primaryText = Color(0xFFF8F8F8);
-  static const secondaryText = Color(0xFF4A4A4A);
+  static const primaryText = Color(0xFFCFCFCF);
+  static const secondaryText = Color(0xFF535353);
 }
