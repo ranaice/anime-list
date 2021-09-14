@@ -46,6 +46,7 @@ class IconSizes {
 
   static const double scale = 1;
 
+  static const double tiny = 8;
   static const double small = 16;
   static const double medium = 24;
   static const double large = 32;

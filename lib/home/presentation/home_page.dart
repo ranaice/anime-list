@@ -1,9 +1,11 @@
-import 'package:anime_list/home/presentation/widgets/upcoming_animes_section.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/presentation/themes/styles.dart';
+import 'widgets/common/bottom_bar.dart';
 import 'widgets/common/home_header.dart';
+import 'widgets/upcoming_animes_section.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -28,10 +30,12 @@ class HomePage extends ConsumerWidget {
               SizedBox(height: Dimensions.l),
               UpcomingAnimesSection(),
               SizedBox(height: Dimensions.xxl),
+              UpcomingAnimesSection(),
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const BottomBar(),
     );
   }
 }

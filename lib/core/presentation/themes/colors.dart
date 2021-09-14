@@ -15,4 +15,6 @@ class AppColors {
 
   static const primaryText = Color(0xFFCFCFCF);
   static const secondaryText = Color(0xFF535353);
+
+  static const shadow = Color(0x0A000000);
 }
