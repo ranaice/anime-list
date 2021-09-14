@@ -1,13 +1,15 @@
 import 'package:dio/dio.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../home/application/upcoming_animes_notifier.dart';
-import '../../home/application/upcoming_animes_state.dart';
-import '../../home/data/usecases/remote_load_upcoming_animes.dart';
-import '../../home/domain/usecases/load_upcoming_animes.dart';
-import '../data/remote_client.dart';
-import '../infrastructure/dio_remote_client.dart';
-import 'environment/environment_config.dart';
+import '../../core/data/remote_client.dart';
+import '../../core/infrastructure/dio_remote_client.dart';
+import '../../core/shared/environment/environment_config.dart';
+import '../application/upcoming_animes_notifier.dart';
+import '../application/upcoming_animes_state.dart';
+import '../data/usecases/remote_load_season_animes.dart';
+import '../data/usecases/remote_load_upcoming_animes.dart';
+import '../domain/usecases/load_season_animes.dart';
+import '../domain/usecases/load_upcoming_animes.dart';
 
 final dioProvider = Provider((ref) => Dio(
       BaseOptions(baseUrl: EnvironmentConfig.instance.values.baseUrl),
@@ -26,5 +28,12 @@ final remoteLoadUpcomingAnimesProvider = Provider<LoadUpcomingAnimes>(
 final upcomingAnimesNotifierProvider = StateNotifierProvider<UpcomingAnimesNotifier, UpcomingAnimesState>(
   (ref) => UpcomingAnimesNotifier(
     ref.watch(remoteLoadUpcomingAnimesProvider),
+  ),
+);
+
+final remoteLoadSeasonAnimesProvider = Provider<LoadSeasonAnimes>(
+  (ref) => RemoteLoadSeasonAnimes(
+    remoteClient: ref.watch(dioRemoteClientProvider),
+    path: '/season/2021/summer',
   ),
 );
