@@ -40,18 +40,18 @@ class AppTextStyles {
   /// Declare a base style for each Family
   static const TextStyle urbanistStyle = TextStyle(fontFamily: Fonts.urbanist);
 
-  static TextStyle get h5 =>
-      urbanistStyle.copyWith(fontSize: FontSizes.s24, fontWeight: FontWeight.w400, letterSpacing: 0);
-  static TextStyle get h6 =>
-      urbanistStyle..copyWith(fontSize: FontSizes.s20, fontWeight: FontWeight.w500, letterSpacing: 0.15);
+  static TextStyle get h5 => urbanistStyle.copyWith(
+      fontSize: FontSizes.s24, fontWeight: FontWeight.w600, letterSpacing: 0, color: AppColors.primaryText);
+  static TextStyle get h6 => urbanistStyle.copyWith(
+      fontSize: FontSizes.s20, fontWeight: FontWeight.w500, letterSpacing: 0.15, color: AppColors.primaryText);
   static TextStyle get subtitle1 => urbanistStyle.copyWith(
       fontSize: FontSizes.s16, fontWeight: FontWeight.w600, letterSpacing: 0.15, color: AppColors.primaryText);
   static TextStyle get subtitle2 => urbanistStyle.copyWith(
       fontSize: FontSizes.s16, fontWeight: FontWeight.w500, letterSpacing: 0.10, color: AppColors.secondaryText);
   static TextStyle get body1 =>
       urbanistStyle.copyWith(fontSize: FontSizes.s16, fontWeight: FontWeight.w400, letterSpacing: 0.5);
-  static TextStyle get body2 =>
-      urbanistStyle.copyWith(fontSize: FontSizes.s14, fontWeight: FontWeight.w400, letterSpacing: 0.25);
+  static TextStyle get body2 => urbanistStyle.copyWith(
+      fontSize: FontSizes.s14, fontWeight: FontWeight.w400, letterSpacing: 0.25, color: AppColors.secondaryText);
   static TextStyle get caption =>
       urbanistStyle.copyWith(fontSize: FontSizes.s12, fontWeight: FontWeight.w400, letterSpacing: 0.4);
   static TextStyle get overline =>
