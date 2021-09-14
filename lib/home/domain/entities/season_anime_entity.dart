@@ -9,8 +9,10 @@ abstract class SeasonAnimeEntity with _$SeasonAnimeEntity {
     required int id,
     required String name,
     required double score,
-    GenreEntity? genre,
+    required List<GenreEntity> genre,
     required int totalEpisodes,
     required String imageUrl,
+    required String synopsis,
+    required String source,
   }) = _SeasonAnimeEntity;
 }
