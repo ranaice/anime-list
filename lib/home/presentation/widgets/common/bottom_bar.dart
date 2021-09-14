@@ -10,10 +10,13 @@ class BottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoTabBar(
-      backgroundColor: Colors.transparent,
-      border: const Border(top: BorderSide(width: 8.0, color: AppColors.shadow)),
-      iconSize: IconSizes.medium,
+    return BottomNavigationBar(
+      selectedIconTheme: IconThemeData(
+        color: Theme.of(context).colorScheme.primary,
+      ),
+      unselectedIconTheme: const IconThemeData(
+        color: AppColors.secondaryText,
+      ),
       items: [
         BottomNavigationBarItem(
           icon: const Icon(Icons.circle_rounded, size: IconSizes.tiny),
@@ -26,9 +29,12 @@ class BottomBar extends StatelessWidget {
                 ),
           ),
         ),
-        const BottomNavigationBarItem(icon: Icon(MdiIcons.cupOutline)),
-        const BottomNavigationBarItem(icon: Icon(MdiIcons.ticketOutline)),
-        const BottomNavigationBarItem(icon: Icon(Icons.search)),
+        // ignore: deprecated_member_use
+        const BottomNavigationBarItem(icon: Icon(MdiIcons.cupOutline), title: Text('')),
+        // ignore: deprecated_member_use
+        const BottomNavigationBarItem(icon: Icon(MdiIcons.ticketOutline), title: Text('')),
+        // ignore: deprecated_member_use
+        const BottomNavigationBarItem(icon: Icon(MdiIcons.magnify), title: Text('')),
       ],
     );
   }

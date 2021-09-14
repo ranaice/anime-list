@@ -30,9 +30,6 @@ class UpcomingAnimeCard extends StatelessWidget {
     }
 
     return Card(
-      shape: const RoundedRectangleBorder(
-        borderRadius: CornersSizes.largeBorderRadius,
-      ),
       clipBehavior: Clip.hardEdge,
       child: Container(
         width: width,
@@ -60,11 +57,8 @@ class UpcomingAnimeCard extends StatelessWidget {
                 ),
                 const SizedBox(width: Dimensions.l),
                 ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: height / 2, maxWidth: width / 2.5),
+                  constraints: BoxConstraints(minHeight: height / 2, maxWidth: width / 2.6),
                   child: Card(
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: CornersSizes.mediumBorderRadius,
-                    ),
                     child: Image.network(
                       imageUrl,
                       fit: BoxFit.cover,
@@ -73,13 +67,15 @@ class UpcomingAnimeCard extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: Dimensions.l),
-            Text(
-              name,
-              style: Theme.of(context).textTheme.bodyText1!.copyWith(color: AppColors.secondaryText),
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              textAlign: TextAlign.center,
+            const SizedBox(height: Dimensions.med),
+            Expanded(
+              child: Text(
+                name,
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(color: AppColors.secondaryText),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),

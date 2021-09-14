@@ -41,6 +41,7 @@ class AppTheme {
       accentColor: colorScheme.secondary,
       backgroundColor: colorScheme.background,
       scaffoldBackgroundColor: colorScheme.background,
+      canvasColor: colorScheme.background,
     );
   }
 }
