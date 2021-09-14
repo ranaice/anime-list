@@ -7,6 +7,10 @@ The design was based on this awesome work [cinema_app].
 
 <img src="https://user-images.githubusercontent.com/9071263/133199727-b708b1a3-6956-4f75-8325-255f3cdb035c.png" width="200"/>
 
+- **DI and State Management**: Riverpod / State Notifier
+- **Http Client**: Dio
+- **Tests**: Mocktail
+- Freezed and Dartz
 
 ## Getting Started 🚀
 
