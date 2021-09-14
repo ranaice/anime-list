@@ -4,5 +4,7 @@
     "userGreeting": "E aí, Diana",
     "currentDate": "Hoje, 14 Setembro",
     "upcomingAnimes": "Em breve",
-    "seasonAnimes": "Temporada Atual"
+    "seasonAnimes": "Temporada Atual",
+    "tryAgain": "Tentar novamente",
+    "errorMessage": "Não conseguimos carregar os dados.\nTente novamente."
 }
