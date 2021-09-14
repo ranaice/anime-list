@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../../core/presentation/themes/styles.dart';
-import '../../../core/shared/providers.dart';
 import '../../application/upcoming_animes_notifier.dart';
 import '../../domain/entities/upcoming_anime_entity.dart';
+import '../../shared/providers.dart';
 import 'anime_card.dart';
 import 'common/failure_layout.dart';
 import 'common/section_header.dart';
