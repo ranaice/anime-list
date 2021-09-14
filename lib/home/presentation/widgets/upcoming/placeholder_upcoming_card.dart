@@ -8,7 +8,7 @@ class PlaceholderUpcomingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height / 5;
+    final height = MediaQuery.of(context).size.height / 4;
     final width = MediaQuery.of(context).size.width / 2;
 
     return Shimmer.fromColors(

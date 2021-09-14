@@ -51,6 +51,5 @@ class SeasonAnimeMainLayout extends StatelessWidget {
         ),
       ],
     );
-    ;
   }
 }

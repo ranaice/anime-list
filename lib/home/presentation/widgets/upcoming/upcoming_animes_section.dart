@@ -1,4 +1,3 @@
-import 'package:anime_list/home/presentation/widgets/upcoming/placeholder_upcoming_card.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -8,7 +7,7 @@ import '../../../domain/entities/upcoming_anime_entity.dart';
 import '../../../shared/providers.dart';
 import '../common/failure_layout.dart';
 import '../common/section_header.dart';
-import '../season/placeholder_shimmer_card.dart';
+import 'placeholder_upcoming_card.dart';
 import 'upcoming_anime_card.dart';
 
 class UpcomingAnimesSection extends ConsumerStatefulWidget {
@@ -31,7 +30,7 @@ class _UpcomingAnimesSectionState extends ConsumerState<UpcomingAnimesSection> {
 
     return SizedBox(
       width: double.infinity,
-      height: screenHeight / 5,
+      height: screenHeight / 3.6,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         separatorBuilder: (_, index) {
@@ -50,6 +49,7 @@ class _UpcomingAnimesSectionState extends ConsumerState<UpcomingAnimesSection> {
             animatedWidget = UpcomingAnimeCard(
               imageUrl: anime.imageUrl,
               startDate: anime.startDate,
+              name: anime.name,
             );
           }
 
