@@ -9,6 +9,7 @@ import '../data/remote_failure.dart';
 class DioRemoteClient extends RemoteClient {
   final Dio _dio;
 
+  // TODO Require Testing
   DioRemoteClient(this._dio);
 
   @override
