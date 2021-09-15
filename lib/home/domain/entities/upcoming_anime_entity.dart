@@ -1,13 +1,13 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+class UpcomingAnimeEntity {
+  final int id;
+  final String name;
+  final String startDate;
+  final String imageUrl;
 
-part 'upcoming_anime_entity.freezed.dart';
-
-@freezed
-abstract class UpcomingAnimeEntity with _$UpcomingAnimeEntity {
-  const factory UpcomingAnimeEntity({
-    required int id,
-    required String name,
-    required String startDate,
-    required String imageUrl,
-  }) = _UpcomingAnimeEntity;
+  const UpcomingAnimeEntity({
+    required this.id,
+    required this.name,
+    required this.startDate,
+    required this.imageUrl,
+  });
 }
