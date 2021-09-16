@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import '../../../../core/presentation/l10n/l10n_extensions.dart';
-import '../../../../core/presentation/themes/styles.dart';
+import '../../../../core/ui/l10n/l10n_extensions.dart';
+import '../../../../core/ui/themes/styles.dart';
 
 class FailureLayout extends StatelessWidget {
   final void Function() onRetry;

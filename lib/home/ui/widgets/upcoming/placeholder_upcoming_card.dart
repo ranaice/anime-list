@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../core/presentation/themes/styles.dart';
+import '../../../../core/ui/themes/styles.dart';
 
 class PlaceholderUpcomingCard extends StatelessWidget {
   const PlaceholderUpcomingCard({Key? key}) : super(key: key);

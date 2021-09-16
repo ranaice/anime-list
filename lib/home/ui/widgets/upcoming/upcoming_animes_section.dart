@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../../core/presentation/themes/styles.dart';
+import '../../../../core/ui/themes/styles.dart';
 import '../../../domain/entities/upcoming_anime_entity.dart';
 import '../../../presentation/upcoming_animes_notifier.dart';
 import '../../../shared/providers.dart';

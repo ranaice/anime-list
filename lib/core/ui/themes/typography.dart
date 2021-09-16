@@ -1,5 +1,6 @@
-import 'package:anime_list/core/presentation/themes/colors.dart';
 import 'package:flutter/material.dart';
+
+import 'colors.dart';
 
 /// A list of font families used by the app. No need to use directly. This will be used by [TextStyles] to create
 /// concrete styles that will be used by the textTheme. So you should use as Theme.of(context).textTheme or

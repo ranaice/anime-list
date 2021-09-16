@@ -1,4 +1,4 @@
-import 'package:anime_list/core/presentation/l10n/l10n_extensions.dart';
+import 'package:anime_list/core/ui/l10n/l10n_extensions.dart';
 import 'package:flutter/material.dart';
 
 class SectionHeader extends StatelessWidget {

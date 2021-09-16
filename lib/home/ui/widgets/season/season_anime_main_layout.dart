@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/presentation/themes/styles.dart';
+import '../../../../core/ui/themes/styles.dart';
 import '../../../domain/entities/season_anime_entity.dart';
 import 'placeholder_shimmer_card.dart';
 import 'season_anime_card.dart';

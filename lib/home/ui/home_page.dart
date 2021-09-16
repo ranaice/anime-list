@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../core/presentation/themes/styles.dart';
+import '../../core/ui/themes/styles.dart';
 import 'widgets/common/bottom_bar.dart';
 import 'widgets/common/home_header.dart';
 import 'widgets/season/season_animes_section.dart';

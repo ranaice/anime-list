@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/presentation/l10n/l10n_extensions.dart';
-import '../../../../core/presentation/themes/styles.dart';
+import '../../../../core/ui/l10n/l10n_extensions.dart';
+import '../../../../core/ui/themes/styles.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({Key? key}) : super(key: key);

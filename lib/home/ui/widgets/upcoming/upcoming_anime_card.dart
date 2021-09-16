@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/presentation/themes/colors.dart';
-import '../../../../core/presentation/themes/styles.dart';
+import '../../../../core/ui/themes/colors.dart';
+import '../../../../core/ui/themes/styles.dart';
 
 class UpcomingAnimeCard extends StatelessWidget {
   final String imageUrl;

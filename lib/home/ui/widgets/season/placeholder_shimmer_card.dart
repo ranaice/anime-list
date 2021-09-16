@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../core/presentation/themes/styles.dart';
+import '../../../../core/ui/themes/styles.dart';
 
 class PlaceholderShimmerCard extends StatefulWidget {
   const PlaceholderShimmerCard({Key? key}) : super(key: key);
