@@ -219,7 +219,7 @@ Clean architecture is a big topic by itself and can lead to many different under
 
 This Clean Architecture proposal, may sound at first like too much unnecessary work is being done, but with time you realize the true benefits of having a well tested and loose coupled code. You don't need to follow every single rule for each layer. You may choose to merge some layers, or to not have models representing every  layer. This decision is up to you and your team, but it's important to know what are the pros and cons of each approach.
 
-It's always nice to read different approaches for the same problem, so take this repo with a grain of salt. I do not intend to be the source of truth, but I hope the examples showed here can help someone out there.
+It's always nice to see different perspectives for the same problem, so take this repo with a grain of salt. I do not intend to be the source of truth, but I hope the examples showed here can help someone out there.
 
 ## References
 
