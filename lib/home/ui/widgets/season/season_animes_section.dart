@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../application/season_animes_notifier.dart';
+import '../../../presentation/season_animes_notifier.dart';
 import '../../../shared/providers.dart';
 import '../common/failure_layout.dart';
 import 'season_anime_main_layout.dart';

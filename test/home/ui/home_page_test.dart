@@ -5,10 +5,10 @@ import 'package:anime_list/home/domain/helpers/load_failure.dart';
 import 'package:anime_list/home/domain/entities/season_anime_entity.dart';
 import 'package:anime_list/home/domain/usecases/load_season_animes.dart';
 import 'package:anime_list/home/domain/usecases/load_upcoming_animes.dart';
-import 'package:anime_list/home/presentation/widgets/season/season_anime_card.dart';
-import 'package:anime_list/home/presentation/widgets/season/season_animes_section.dart';
-import 'package:anime_list/home/presentation/widgets/upcoming/upcoming_anime_card.dart';
-import 'package:anime_list/home/presentation/widgets/upcoming/upcoming_animes_section.dart';
+import 'package:anime_list/home/ui/widgets/season/season_anime_card.dart';
+import 'package:anime_list/home/ui/widgets/season/season_animes_section.dart';
+import 'package:anime_list/home/ui/widgets/upcoming/upcoming_anime_card.dart';
+import 'package:anime_list/home/ui/widgets/upcoming/upcoming_animes_section.dart';
 
 import 'package:anime_list/home/shared/providers.dart';
 import 'package:dartz/dartz.dart';
