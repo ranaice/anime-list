@@ -1,12 +1,15 @@
 # Anime List
 
-A sample app to list currrent and upcoming animes. 
-The goal of this application is to provide an example approach to using Clean Architecture and SOLID.
+A sample application that can list currrent and upcoming animes. 
+The main goal of this repository is to serve as an example approach to using Clean Architecture and SOLID.
 
-The design was based on this awesome work [cinema_app].
+Not only that, but I hope it also can present some best practices for developing flutter apps.
+
+The UI was inspired by this awesome work [Cinema App](https://dribbble.com/shots/15189116-Cinema-App).
 
 <img src="https://user-images.githubusercontent.com/9071263/133199727-b708b1a3-6956-4f75-8325-255f3cdb035c.png" width="200"/>
 
+---
 
 ## Getting Started 🚀
 
@@ -43,13 +46,36 @@ $ flutter run --flavor prod --target lib/main_production.dart
 
 ### Domain
 
+The domain will hold our core Business Rules (Entities) and Application Rules (Use Cases) and should be completely independent of other layers, it should know nothing about them. Ideally, this layer should be as pure as possible, meaning it should be independent of external libraries or frameworks. 
+It's OK to have a few utilitary libs if they are really needed, it is up to the developer.
+
+Should have Unit Tests.
+
 ### Data
+
+This layer will orchestrate the data coming from multiple datasource from the Infrastructture Layer and will hand them to the Presentation Layer. Can have Data Models (DTOs) to represent external data.
+
+Should have Unit Tests.
 
 ### Infrastructure
 
-### Application
+Everything that needs to make an external access, such as Http Requests, Local Databases or Hardware related stuff, should live here. This layer basically have DataSource Adapters. This is the most external layer and can have many changes, which is fine, because this means we will only need to change one layer.
+
+Should have Unit Tests.
 
 ### Presentation
+
+Is the middle man between the UI and the Data layers. 
+Deal with State Management and hold the presenttation logic. Can also have UI/View Models to serve the UI layer if needed.
+Will consume UseCases from the data layer which will fetch data different datasources.
+
+Should have Unit Tests.
+
+### UI
+
+As the name suggests, this layer will hold our user interface and is responsible for dealing with user input and screen output. Just like the infrastructure layer, the UI layer is an outer boundary of our application and should be self contained and will receive it's data from the Presentation Layer.
+
+Should have Widget Tests.
 
 ## File Generation 🤖
 
@@ -185,11 +211,27 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 - [ ] Optimize for the Web and Desktop
 - [ ] Use Navigation 2.0
 - [ ] Multi Theming Support
+- [ ] Animations
 
+## Conclusion
+
+Clean architecture is a big topic by itself and can lead to many different understanding and implementations. There is no right way of doing it. It can be more restrictive or not, It's a decision you will have to make with your team based on your project's needs.
+
+This Clean Architecture proposal, may sound at first like too much unnecessary work is being done, but with time you realize the true benefits of having a well tested and loose coupled code. You don't need to follow every single rule for each layer. You may choose to merge some layers, or to not have models representing every  layer. This decision is up to you and your team, but it's important to know what are the pros and cons of each approach.
+
+It's always nice to read different approaches for the same problem, so take this repo with a grain of salt. I do not intend to be the source of truth, but I hope the examples showed here can help someone out there.
+
+## References
+
+- [Uncle Bob - The Clean Architecture Blog](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [Reso Coder - Flutter TDD Clean Architecture](https://www.youtube.com/playlist?list=PLB6lc7nQ1n4iYGE_khpXRdJkJEp9WOech)
+- [Joe Birch - Clean Architecture Sample](https://github.com/bufferapp/android-clean-architecture-boilerplate)
+- [Guilherme - CA Proposal](https://github.com/guilherme-v/flutter-clean-arch)
+- [Rodrigo Manguinho - Flutter, TDD and Clean Arch Course](https://www.udemy.com/course/flutter-com-mango/)
+- [Flutterando](https://github.com/Flutterando/Clean-Dart)
 
 README based on the [Very Good CLI][very_good_cli_link]
 
 [flutter_localizations_link]: https://api.flutter.dev/flutter/flutter_localizations/flutter_localizations-library.html
 [internationalization_link]: https://flutter.dev/docs/development/accessibility-and-localization/internationalization
 [very_good_cli_link]: https://github.com/VeryGoodOpenSource/very_good_cli
-[cinema_app]: https://dribbble.com/shots/15189116-Cinema-App
